@@ -1,9 +1,9 @@
-import MsgBox from './MsgBox'
+import TodoList from './TodoList';
 import './App.css'
 
 function App() {
   return(
-  <MsgBox name = "Bhargav" textcolor = "orange"/>
+  <TodoList/>
 ) ;
 }
 
