@@ -6,12 +6,19 @@ export default function TodoList(){
     let [todos, setTodos] = useState([{task: "Sample-task", id: uuidv4(), isCompleted: false }]);
     let [newTodo, setNewTodo] = useState("");
 
-    let addNewTask = ()=>{
-        setTodos((prevTodos) =>{
-            return [...prevTodos,{task: newTodo, id: uuidv4()}];
-        });
-        setNewTodo("");
-    }
+    let addNewTask = () => {
+    if (newTodo.trim() === "") return;
+
+    setTodos((prevTodos) => {
+        return [...prevTodos, {
+            task: newTodo,
+            id: uuidv4(),
+            isCompleted: false
+        }];
+    });
+
+    setNewTodo("");
+    };
 
     let updateTodoValue = (event) =>{
         setNewTodo(event.target.value);
