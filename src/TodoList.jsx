@@ -17,9 +17,11 @@ export default function TodoList(){
         setNewTodo(event.target.value);
     }
 
-    let deleteTodo = (id)=>{
-        setTodos((prevTodos) => todos.filter((todos) => todos.id != id));
-    }
+    let deleteTodo = (id) => {
+    setTodos((prevTodos) =>
+        prevTodos.filter((todo) => todo.id !== id)
+    );
+    };
 
     let completeTodo = (id) => {
     setTodos((prevTasks) => {
