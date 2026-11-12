@@ -19,15 +19,15 @@ export default function TodoList(){
         setTodos((prevTodos) => todos.filter((todos) => todos.id != id));
     }
 
-    // let completeTodo = (id) =>{
-    //     setTodos((prevTasks)=>{
-    //         prevTasks.map((todo) =>{
-    //             if(todo.id === id){
-    //                 todo.style = {textDecoration: "line-through"};
-    //             }
-    //         })
-    //     })
-    // }
+    let completeTodo = (id) =>{
+        setTodos((prevTasks)=>{
+            prevTasks.map((todo) =>{
+                if(todo.id === id){
+                    todo.style = {textDecoration: "line-through"};
+                }
+            })
+        })
+    }
 
     let UpperCaseAll = () =>{
         setTodos((prevTasks) =>
