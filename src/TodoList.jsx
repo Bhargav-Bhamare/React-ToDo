@@ -44,6 +44,17 @@ export default function TodoList(){
         });
     });
     };
+
+    let markAllasDone = () =>{
+        setTodos((prevTasks) =>{
+            return prevTasks.map((todo) =>{
+                return{
+                    ...todo,
+                    isCompleted: true
+                };
+            })
+        });
+    };
     
 
     // let UpperCaseAll = () =>{
@@ -107,12 +118,7 @@ export default function TodoList(){
                 ))
             }
         </ul>
-        <span style={{
-            textDecoration: todo.isCompleted ? "line-through" : "none"
-        }}>
-            {todo.task}
-        </span>
-        {/* <button onClick={UpperCaseAll}>Mark All as Done</button> */}
+        <button onClick={markAllasDone}>Mark All as Done</button>
         </div>
     );
 }
