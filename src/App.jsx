@@ -1,10 +1,14 @@
-import TodoList from './TodoList';
+import WeatherApp from './WeatherApp';
 import './App.css'
 
 function App() {
   return(
-  <TodoList/>
-) ;
+  <>
+  <br /><br />
+  <WeatherApp/>
+  </>
+  
+  );
 }
 
 export default App;
